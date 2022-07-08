@@ -1,0 +1,15 @@
+{
+    "email_info": 
+        {
+            "email_user": "your_email",
+            "password": "your_password",
+            "smtp": "smtp.mail.yahoo.com",
+            "port": "587"
+        },
+    
+    "emails": 
+        {
+            "gate1": "phone_number@txt.att.net",
+            "gate2": "phone_number@txt.att.net"
+        } 
+}

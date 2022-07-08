@@ -1,0 +1,41 @@
+From: "name" <email@yahoo.com> 
+    To: "name" <email@gmail.com> 
+Subject: Macbooks are instock 
+Content-Type: text/html; charset="utf8" 
+
+<html>   
+    <body>     
+        <style>         
+        .card{
+             box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+             transition: 0.3s;
+             border-radius: 5px;
+             width: 300px;
+             height: 150px;
+         }
+         .container,
+         .card-title,
+         .card-text {
+             padding: 2px 16px;
+         }
+         img{
+             border-radius: 5px 5px 0 0;
+         }
+     </style>
+     <div class="container">
+       <p>Hey, the new Macbooks are now instock!</p>
+         <div class="card">
+             <div class="card-body">
+                 <div class="card-body">
+                     <h2 class="card-title">M2 Macbook Link</h2>
+                     <div class="card-text">
+                         <a href="https://www.apple.com/us-edu/shop/buy-mac/macbook-air/with-m2-chip" class="btn">
+                             <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" width="60" height="60">
+                         </a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+   </body>
+ </html>
