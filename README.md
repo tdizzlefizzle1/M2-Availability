@@ -125,9 +125,9 @@ Here is the curl command (change the highlighted):
 
 ### **And lastly,** you will have to setup crontab
 
-If you are not familiar with crontab, here is a [link](https://phoenixnap.com/kb/set-up-cron-job-linux) to get familiar with it. In crontab I wrote this job to be run every 3 minutes:
+If you are not familiar with crontab, here is a [link](https://phoenixnap.com/kb/set-up-cron-job-linux) to get familiar with it. In crontab, I wrote this job to be run every 3 minutes:
         
-    */3 * * * * root /root/M2-Availability/is_m2_available.sh
+    */3 * * * * /root/M2-Availability/is_m2_available.sh
 Experiment with this and try to get it up and running. On Centos, I used `service crond status` to check whether or not crontab was doing what it was supposed to be doing. Don't forget to make sure crontab is running with `service crond start`
 
 That should cover it!
