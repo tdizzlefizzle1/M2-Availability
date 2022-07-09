@@ -1,9 +1,13 @@
 import smtplib 
 import json
+import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-infile = open("email.json", "r")
+path = os.path.dirname(os.path.realpath(__file__))
+email_path = os.path.join(path, "email.json")
+
+infile = open(email_path, "r")
 sms_info = json.load(infile)
 
 email = sms_info["email_info"]["email_user"]
