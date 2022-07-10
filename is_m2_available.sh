@@ -17,11 +17,12 @@ num=0
 echo -e "Hey, $(whoami)!\nI have the search results for the latest MacBook M2 Airs:"
 for j in $m2_midnight $m2_starlight $m2_spacegray $m2_silver; do
 	if [[ $j != '"false"' ]]; then
-		python3 ~/M2-Macbook-Availability/sms.py
+		bash ~/M2-Availability/sender.sh
+		python3 ~/M2-Availability/sms.py
+		crontab -r
 		exit
 	else
 		printf "Is \e[1m${arr[num]}\e[0m available?: \e[31m\e[4m\e[1mNo\e[0m\n"
-
 	fi
 	((num=num+1))
 done
