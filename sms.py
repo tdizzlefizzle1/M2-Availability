@@ -5,7 +5,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 path = os.path.dirname(os.path.realpath(__file__))
-email_path = os.path.join(path, "email.json")
+email_path = os.path.join(path, "number.json")
 
 infile = open(email_path, "r")
 sms_info = json.load(infile)
@@ -19,7 +19,7 @@ server = smtplib.SMTP(smtp,port)
 server.starttls()
 server.login(email,pas)
 
-for __, value in sms_info["emails"].items():
+for __, value in sms_info["numbers"].items():
     msg = MIMEMultipart()    
     sms_gateway = value
     print(sms_gateway)

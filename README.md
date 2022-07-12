@@ -23,7 +23,7 @@ M2-Availability is a group of simple scripts that are ran at minute intervals to
 ## **How to run**
 ## Steps:
 1. Change permissions of scripts to be run as executables
-2. Create two files **'mail.txt'** and **'email.json'**
+2. Create two files **'mail.txt'** and **'number.json'**
 3. Create curl command with email information
 4. Set up crontab to schedule script execution with minute intervals
 
@@ -36,8 +36,8 @@ M2-Availability is a group of simple scripts that are ran at minute intervals to
 
 <br>
 
-### **Secondly**, you will have to create two separate files named **'mail.txt'** and **'email.json'**
-In **'mail.txt'** I gave a super simple outline that you can create the text file with. The only thing you would need to change would be the sender and receiver fields for the email. Now for **'email.json'** you will just need to input your smtp information for whatever email you are with. Yahoo uses the provided one in the example but something like Gmail would use **'smtp.gmail.com'**. The second part of this is you will have to create the key and value for the phone numbers you want to send the message to. Just use the same syntax as the example. In the example, you just replace the value with your phone number and then you have to put the correct sms gateway after the **'@'** symbol. Here is a [link](https://www.liquisearch.com/list_of_sms_gateways) of sms gateways for all the different service carriers. 
+### **Secondly**, you will have to create two separate files named **'mail.txt'** and **'number.json'**
+In **'mail.txt'** I gave a super simple outline that you can create the text file with. The only thing you would need to change would be the sender and receiver fields for the email. Now for **'number.json'** you will just need to input your smtp information for whatever email you are with. Yahoo uses the provided one in the example but something like Gmail would use **'smtp.gmail.com'**. The second part of this is you will have to create the key and value for the phone numbers you want to send the message to. Just use the same syntax as the example. In the example, you just replace the value with your phone number and then you have to put the correct sms gateway after the **'@'** symbol. Here is a [link](https://www.liquisearch.com/list_of_sms_gateways) of sms gateways for all the different service carriers. 
 
 <br>
 
@@ -87,7 +87,7 @@ In **'mail.txt'** I gave a super simple outline that you can create the text fil
 ```
 <br><br>
 
-**email.json**
+**number.json**
 ```
         {
     "email_info": 
@@ -98,7 +98,7 @@ In **'mail.txt'** I gave a super simple outline that you can create the text fil
             "port": "587"
         },
     
-    "emails": 
+    "numbers": 
         {
             "gate1": "phone_number@txt.att.net",
             "gate2": "phone_number@txt.att.net"
