@@ -34,7 +34,7 @@ M2-Availability is a group of simple scripts that are ran at minute intervals to
         chmod +x scriptname.sh      
         # Change 'scriptname' with correct file name
 
-<br>
+<br><br>
 
 ### **Secondly**, you will have to create two separate files named **'mail.txt'** and **'number.json'**
 In **'mail.txt'** I gave a super simple outline that you can create the text file with. The only thing you would need to change would be the sender and receiver fields for the email. Now for **'number.json'** you will just need to input your smtp information for whatever email you are with. Yahoo uses the provided one in the example but something like Gmail would use **'smtp.gmail.com'**. The second part of this is you will have to create the key and value for the phone numbers you want to send the message to. Just use the same syntax as the example. In the example, you just replace the value with your phone number and then you have to put the correct sms gateway after the **'@'** symbol. Here is a [link](https://www.liquisearch.com/list_of_sms_gateways) of sms gateways for all the different service carriers. 
@@ -85,7 +85,7 @@ In **'mail.txt'** I gave a super simple outline that you can create the text fil
        </body>
      </html>
 ```
-<br><br>
+<br>
 
 **number.json**
 ```
@@ -106,22 +106,24 @@ In **'mail.txt'** I gave a super simple outline that you can create the text fil
     }
 ```
 
-<br>
+<br><br>
 
-### **Thirdly**, because I don't have way to read information from a file and create the curl command for the email, you will have to input this large curl command into **'is_m2_available.sh'**
-
-Here is the curl command (change the highlighted):
->  curl --ssl-reqd --url 'smtps://`your_email_smtp_gateway:your_email_smtp_port`' --user '`your_email:your_email_password`' --mail-from '`your_email`' --mail-rcpt '`receiver_email@gmail.com`' --mail-rcpt '`receiver_email@yahoo.com`' --upload-file ~/M2-Macbook-Availability/mail.txt
-```
-    for j in $m2_midnight $m2_starlight $m2_spacegray $m2_silver; do
-    if [[ $j != '"false"' ]]; then
-        ##### WRITE CURL COMMAND HERE #####
-    	python3 ~/M2-Macbook-Availability/sms.py
-    	exit
-    else 
-```
+### **Thirdly**, you will have to create another text file called **mail_info.txt** that contains all of the mail information in order to send emails. Obviously just replace the values in that file with the correct email information and get rid of the quotations as well.
 
 <br>
+
+**mail_info.txt**
+```
+stmp=smtp.mail.yahoo.com or other email smtp gateway
+port=587
+sender="your_email"
+password="your_email_password"
+from="your_email"
+receiver="email_you_want_to_send_to"
+receiver="email_you_want_to_send_to"
+```
+
+<br><br>
 
 ### **And lastly,** you will have to setup crontab
 
